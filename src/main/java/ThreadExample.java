@@ -1,9 +1,10 @@
 public class ThreadExample {
     public static void main(String[] args) {
-        MyThread t1 = new MyThread();
-        MyThread t2 = new MyThread();
+        MyRunnable r1 = new MyRunnable();
+        Thread t1 = new Thread(r1);
+        Thread t2 = new Thread(r1);
 
-        t1.start();
-        t2.start();
+        t1.run();
+        t2.run();
     }
 }
